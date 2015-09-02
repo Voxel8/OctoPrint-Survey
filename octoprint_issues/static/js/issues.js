@@ -4,10 +4,6 @@ $(function() {
 
         self.appearance = parameters[0];
 
-        self.onBeforeBinding = function() {
-            console.log("FOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-        };
-
         self.onEventPrintFailed = function(payload) {
             var params = self.encodeQueryData({'title': 'PrintFailed'});
             var url = 'https://github.com/Voxel8/DevKit-Issues/issues/new?' + params;
