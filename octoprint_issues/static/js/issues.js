@@ -3,7 +3,7 @@ $(function() {
         var self = this;
 
         self.appearance = parameters[0];
-        self.url = 'https://github.com/Voxel8/DevKit-Issues/issues/new?';
+        self.url = 'https://github.com/Voxel8/Print-Reporting/issues/new?';
 
         self.onEventPrintFailed = function(payload) {
             var params = self.encodeQueryData({'title': 'PrintFailed'});
