@@ -8,7 +8,7 @@ class IssuesPlugin(octoprint.plugin.EventHandlerPlugin, octoprint.plugin.AssetPl
 
     def get_update_information(self, *args, **kwargs):
         return dict(
-            alignment_plugin=dict(
+            issues_plugin=dict(
                 type="github_commit",
                 user="Voxel8",
                 repo="OctoPrint-Issues",
