@@ -4,7 +4,9 @@ from __future__ import absolute_import
 import octoprint.plugin
 
 
-class IssuesPlugin(octoprint.plugin.EventHandlerPlugin, octoprint.plugin.AssetPlugin):
+class IssuesPlugin(octoprint.plugin.EventHandlerPlugin,
+                   octoprint.plugin.AssetPlugin,
+                ):
 
     def get_update_information(self, *args, **kwargs):
         return dict(
@@ -19,8 +21,8 @@ class IssuesPlugin(octoprint.plugin.EventHandlerPlugin, octoprint.plugin.AssetPl
 
     def get_assets(self):
          return {
-             "js": ["js/issues.js"],
-             #"css": ["css/navbartemp.css"],
+             "js": ["js/issues.js", "js/featherlight.min.js"],
+             "css": ["css/featherlight.min.css"],
              #"less": ["less/navbartemp.less"]
          }
 
