@@ -30,7 +30,7 @@ class SurveyPlugin(octoprint.plugin.EventHandlerPlugin,
          }
 
     def loglines(self, length=None):
-         with open('/Users/jack/Library/Application Support/OctoPrint/logs/octoprint.log') as logfile:
+         with open('/home/pi/.octoprint/logs/octoprint.log') as logfile:
              lines = logfile.readlines()
              if length is None:
                  return lines
