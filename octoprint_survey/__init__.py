@@ -1,11 +1,15 @@
 # coding=utf-8
 from __future__ import absolute_import
 
+import flask
+
 import octoprint.plugin
 
 
 class SurveyPlugin(octoprint.plugin.EventHandlerPlugin,
                    octoprint.plugin.AssetPlugin,
+                   octoprint.plugin.TemplatePlugin,
+                   octoprint.plugin.SimpleApiPlugin,
                 ):
 
     def get_update_information(self, *args, **kwargs):
@@ -24,6 +28,19 @@ class SurveyPlugin(octoprint.plugin.EventHandlerPlugin,
              "js": ["js/survey.js", "js/featherlight.min.js"],
              "css": ["css/featherlight.min.css"],
          }
+
+    def loglines(self, length=None):
+         with open('/Users/jack/Library/Application Support/OctoPrint/logs/octoprint.log') as logfile:
+             lines = logfile.readlines()
+             if length is None:
+                 return lines
+             else:
+                 return lines[-length:]
+
+    ### SimpleApiPlugin API ####################################################
+
+    def on_api_get(self, request):
+        return flask.jsonify(loglines='\n'.join(self.loglines(30)))
 
 
 def __plugin_load__():
