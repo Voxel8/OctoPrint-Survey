@@ -19,8 +19,8 @@ $(function() {
                 //});
                 $.featherlight({
                     iframe: self.feedbackUrl,// + params,
-                    iframeWidth: 600,
-                    iframeHeight: 800
+                    iframeWidth: "95%",
+                    iframeHeight: "95%"
                 });
             });
         };
