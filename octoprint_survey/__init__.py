@@ -26,7 +26,7 @@ class SurveyPlugin(octoprint.plugin.EventHandlerPlugin,
     def get_assets(self):
          return {
              "js": ["js/survey.js", "js/featherlight.min.js"],
-             "css": ["css/featherlight.min.css"],
+             "css": ["css/featherlight.min.css", "css/main.css"],
          }
 
     def loglines(self, length=None):
