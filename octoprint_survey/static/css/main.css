@@ -1,0 +1,24 @@
+@media (max-width: 767px) {
+  .featherlight {
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .featherlight .featherlight-content {
+    width: 100%;
+    height: 100%;
+    margin: 0!important;
+    padding: 0!important;
+    border: none!important;
+    max-height: 100%!important;
+  }
+  .featherlight .featherlight-inner {
+    width: 100%!important;
+    height: 100%!important
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .featherlight:before {
+    content: initial!important;
+  }
+}

@@ -58,6 +58,6 @@ $(function() {
     OCTOPRINT_VIEWMODELS.push([
         IssuesViewModel,
         ["appearanceViewModel", "printerProfilesViewModel"],
-        ""
+        []
     ]);
 });
